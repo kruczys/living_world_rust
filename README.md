@@ -34,7 +34,7 @@ Not in any particular order
 
 ## License
 
-This software is completely free. You can do anything with it except for selling, renting on any other form of getting money from it.
+This software is completely free. You can do anything with it except for selling, renting or any other form of getting money from it.
 
 ## Contact
 
