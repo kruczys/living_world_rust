@@ -4,6 +4,8 @@ This project is simple world simulation, in the future it might contain graphics
 
 ## Todo
 
+Not in any particular order
+
 - [ ] Add organisms
 - [ ] Add organisms interaction logic, collisions etc.
 - [ ] Add evolution
