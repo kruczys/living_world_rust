@@ -9,7 +9,13 @@ Not in any particular order
 - [ ] Add organisms
 - [ ] Add organisms interaction logic, collisions etc.
 - [ ] Add evolution
-- [ ] Add world printing mechanic
+- [ ] Add world printing mechanic, before graphics
 - [ ] Add world turns
 - [ ] Add graphics
 - [ ] Finish readme
+- [ ] Add statistics, with detailed info on evolution e.g. which trait evolved at which turn, which trait was the strongest in current world
+- [ ] Add organism behavior e.g. wolfs attack in packs
+- [ ] Add world traits like temperature or bodies of water
+- [ ] Add more traits for organisms
+- [ ] Add family tree for each organism
+- [ ] Add random name for each organism
