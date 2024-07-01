@@ -1,5 +1,4 @@
 use crate::control::position::Position;
-use crate::control::world::World;
 
 #[derive(Debug)]
 pub struct Organism {
@@ -8,17 +7,25 @@ pub struct Organism {
     position: Position,
     initiative: i32,
     power_to_reproduce: i32,
-    world: World,
 }
 
 impl Organism {
-    fn new(
+    pub fn origin() -> Organism {
+        Organism {
+            sign: String::from("O"),
+            power: 10,
+            position: Position::new(0, 0),
+            initiative: 0,
+            power_to_reproduce: 10,
+        }
+    }
+
+    pub fn new(
         sign: String,
         power: i32,
         position: Position,
         initiative: i32,
         power_to_reproduce: i32,
-        world: World,
     ) -> Organism {
         Organism {
             sign,
@@ -26,7 +33,6 @@ impl Organism {
             position,
             initiative,
             power_to_reproduce,
-            world,
         }
     }
 }
