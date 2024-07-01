@@ -1,5 +1,6 @@
 use crate::control::organism::Organism;
 
+#[derive(Debug)]
 pub struct World {
     x_dim: i32,
     y_dim: i32,

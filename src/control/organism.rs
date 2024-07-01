@@ -1,6 +1,7 @@
 use crate::control::position::Position;
 use crate::control::world::World;
 
+#[derive(Debug)]
 pub struct Organism {
     sign: String,
     power: i32,
