@@ -4,7 +4,7 @@ use crate::control::position::Position;
 pub struct Organism {
     sign: String,
     power: i32,
-    position: Position,
+    pub position: Position,
     initiative: i32,
     power_to_reproduce: i32,
 }
@@ -34,5 +34,9 @@ impl Organism {
             initiative,
             power_to_reproduce,
         }
+    }
+
+    pub fn power(&self) -> i32 {
+        self.power
     }
 }
