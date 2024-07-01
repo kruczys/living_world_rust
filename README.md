@@ -15,7 +15,8 @@ Not in any particular order
 - [ ] Finish readme
 - [ ] Add statistics, with detailed info on evolution e.g. which trait evolved at which turn, which trait was the strongest in current world
 - [ ] Add organism behavior e.g. wolfs attack in packs
-- [ ] Add world traits like temperature or bodies of water
+- [ ] Add world traits like temperature or bodies of water, which influence organisms e.g. if it's too cold plants die
 - [ ] Add more traits for organisms
 - [ ] Add family tree for each organism
 - [ ] Add random name for each organism
+- [ ] Add interactivity e.g. user can place organisms with mouse
