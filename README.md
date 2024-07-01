@@ -22,6 +22,7 @@ Not in any particular order
 - [ ] Add interactivity e.g. user can place organisms with mouse
 - [ ] Compile to wasm and create web application
 - [ ] Add "god" abilities for user e.g. ability to kill any organism through interface
+- [ ] Make it possible for users to add their own organisms
 
 ## My code of conduct for this project
 
