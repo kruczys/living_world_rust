@@ -31,11 +31,11 @@ pub trait Survival {
 }
 
 pub trait Movement {
-    fn move_position(self, x: i32, y: i32);
+    fn move_position(&mut self, world_dim: i32, x: i32, y: i32);
 }
 
-pub trait Interaction<T: Survival> {
-    fn reproduce(self, other: T);
-    fn attack(self, other: T);
-    fn eat(self, other: T);
+pub trait Interaction {
+    fn reproduce(self, other: &dyn Survival);
+    fn attack(self, other: &dyn Survival);
+    fn eat(self, other: &dyn Survival);
 }

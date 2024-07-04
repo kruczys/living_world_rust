@@ -1,5 +1,6 @@
 use crate::control::orgs_data_model::Attributes;
 use crate::control::orgs_data_model::Evolution;
+use crate::control::orgs_data_model::Movement;
 use crate::control::orgs_data_model::Reproduction;
 use crate::control::orgs_data_model::Status;
 use crate::control::orgs_data_model::Survival;
@@ -44,5 +45,11 @@ impl Survival for SimpleOrganism {
     // TODO: Implement evolution
     fn evolve(&mut self) {
         println!("I am evolving");
+    }
+}
+
+impl Movement for SimpleOrganism {
+    fn move_position(&mut self, world_dim: i32, x: i32, y: i32) {
+        self.pos.move_position(world_dim, x, y);
     }
 }
