@@ -1,5 +1,5 @@
 // use crate::control::organism::Exist;
-use crate::control::organisms::Organism;
+use crate::control::orgs_data_model::Organism;
 
 #[derive(Debug)]
 pub struct World<'a> {
