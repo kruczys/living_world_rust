@@ -1,14 +1,15 @@
-use crate::control::organism::Organism;
+// use crate::control::organism::Exist;
+use crate::control::organisms::Organism;
 
 #[derive(Debug)]
-pub struct World {
+pub struct World<'a> {
     x_dim: i32,
     y_dim: i32,
-    pub organisms: Vec<Organism>,
+    pub organisms: Vec<&'a Organism>,
 }
 
-impl World {
-    pub fn new(x_dim: i32, y_dim: i32) -> World {
+impl<'a> World<'a> {
+    pub fn new(x_dim: i32, y_dim: i32) -> World<'a> {
         World {
             x_dim,
             y_dim,
@@ -16,7 +17,7 @@ impl World {
         }
     }
 
-    pub fn add_organism(&mut self, organism: Organism) {
+    pub fn add_organism(&mut self, organism: &'a Organism) {
         self.organisms.push(organism);
     }
 
