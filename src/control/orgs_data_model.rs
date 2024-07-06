@@ -28,6 +28,10 @@ pub trait Survival {
     fn live(&mut self);
     fn die(&mut self);
     fn evolve(&mut self);
+    fn get_sign(&self) -> char {
+        self.get_sign()
+    }
+    fn get_position(&self) -> (i32, i32);
 }
 
 pub trait Movement {

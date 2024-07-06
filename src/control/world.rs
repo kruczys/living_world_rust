@@ -1,14 +1,13 @@
-// use crate::control::organism::Exist;
+use crate::control::orgs_data_model::Survival;
 
-#[derive(Debug)]
-pub struct World<'a, T> {
+pub struct World {
     x_dim: i32,
     y_dim: i32,
-    pub organisms: Vec<&'a T>,
+    pub organisms: Vec<Box<dyn Survival>>,
 }
 
-impl<'a, T> World<'a, T> {
-    pub fn new(x_dim: i32, y_dim: i32) -> World<'a, T> {
+impl World {
+    pub fn new(x_dim: i32, y_dim: i32) -> World {
         World {
             x_dim,
             y_dim,
@@ -16,7 +15,7 @@ impl<'a, T> World<'a, T> {
         }
     }
 
-    pub fn add_organism(&mut self, organism: &'a T) {
+    pub fn add_organism(&mut self, organism: dyn Survival) {
         self.organisms.push(organism);
     }
 
@@ -25,5 +24,24 @@ impl<'a, T> World<'a, T> {
             return self.y_dim;
         }
         self.x_dim
+    }
+
+    pub fn printwrld(self) {
+        for i in 0..self.dim() {
+            for j in 0..self.dim() {
+                let mut found = false;
+                for org in self.organisms.iter() {
+                    if org.pos.x == i && org.pos.y == j {
+                        print!("{}", org.get_sign());
+                        found = true;
+                        break;
+                    }
+                }
+                if !found {
+                    print!(".");
+                }
+            }
+            println!();
+        }
     }
 }
