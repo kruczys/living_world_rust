@@ -45,4 +45,12 @@ impl Survival for Grass {
     fn evolve(&mut self) {
         println!("I am evolving");
     }
+
+    fn get_position(&self) -> &Position {
+        &self.pos
+    }
+
+    fn get_sign(&self) -> char {
+        self.attr.sign
+    }
 }

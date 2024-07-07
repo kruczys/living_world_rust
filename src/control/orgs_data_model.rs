@@ -1,3 +1,5 @@
+use crate::control::position::Position;
+
 #[derive(Debug)]
 pub struct Attributes {
     pub power: i32,
@@ -28,10 +30,8 @@ pub trait Survival {
     fn live(&mut self);
     fn die(&mut self);
     fn evolve(&mut self);
-    fn get_sign(&self) -> char {
-        self.get_sign()
-    }
-    fn get_position(&self) -> (i32, i32);
+    fn get_position(&self) -> &Position;
+    fn get_sign(&self) -> char;
 }
 
 pub trait Movement {

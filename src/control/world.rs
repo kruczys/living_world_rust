@@ -15,7 +15,7 @@ impl World {
         }
     }
 
-    pub fn add_organism(&mut self, organism: dyn Survival) {
+    pub fn add_organism(&mut self, organism: Box<dyn Survival>) {
         self.organisms.push(organism);
     }
 
@@ -31,7 +31,7 @@ impl World {
             for j in 0..self.dim() {
                 let mut found = false;
                 for org in self.organisms.iter() {
-                    if org.pos.x == i && org.pos.y == j {
+                    if org.get_position().x == i && org.get_position().y == j {
                         print!("{}", org.get_sign());
                         found = true;
                         break;

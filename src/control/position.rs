@@ -1,7 +1,7 @@
 #[derive(Debug)]
 pub struct Position {
-    x: i32,
-    y: i32,
+    pub x: i32,
+    pub y: i32,
 }
 
 impl Position {
