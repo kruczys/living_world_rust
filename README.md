@@ -6,10 +6,10 @@ This project is a simple world simulation, in the future it might contain graphi
 
 Not in any particular order
 
-- [ ] Add organisms
+- [x] Add organisms base
 - [ ] Add organisms interaction logic, collisions etc.
 - [ ] Add evolution
-- [ ] Add world printing mechanic, before graphics
+- [x] Add world printing mechanic, before graphics
 - [ ] Add world turns
 - [ ] Add graphics
 - [ ] Finish readme
