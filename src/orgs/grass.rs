@@ -1,13 +1,12 @@
-use crate::control::orgs_data_model::Attributes;
-use crate::control::orgs_data_model::Evolution;
-use crate::control::orgs_data_model::Movement;
-use crate::control::orgs_data_model::Reproduction;
-use crate::control::orgs_data_model::Status;
-use crate::control::orgs_data_model::Survival;
 use crate::control::position::Position;
+use crate::orgs::orgs_data_model::Attributes;
+use crate::orgs::orgs_data_model::Evolution;
+use crate::orgs::orgs_data_model::Reproduction;
+use crate::orgs::orgs_data_model::Status;
+use crate::orgs::orgs_data_model::Survival;
 
 #[derive(Debug)]
-pub struct SimpleOrganism {
+pub struct Grass {
     attr: Attributes,
     repr: Reproduction,
     evo: Evolution,
@@ -15,14 +14,14 @@ pub struct SimpleOrganism {
     status: Status,
 }
 
-impl SimpleOrganism {
+impl Grass {
     pub fn new(at_x: i32, at_y: i32) -> Self {
         Self {
             attr: Attributes {
                 power: 10,
                 health: 10,
                 attack_damage: 10,
-                sign: 'S',
+                sign: 'G',
                 rounds_alive: 0,
             },
             repr: Reproduction { no_offspring: 2 },
@@ -33,7 +32,7 @@ impl SimpleOrganism {
     }
 }
 
-impl Survival for SimpleOrganism {
+impl Survival for Grass {
     fn live(&mut self) {
         self.attr.power += 2;
         self.attr.rounds_alive += 1;
@@ -53,11 +52,5 @@ impl Survival for SimpleOrganism {
 
     fn get_sign(&self) -> char {
         self.attr.sign
-    }
-}
-
-impl Movement for SimpleOrganism {
-    fn move_position(&mut self, world_dim: i32, x: i32, y: i32) {
-        self.pos.move_position(world_dim, x, y);
     }
 }

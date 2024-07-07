@@ -1,7 +1,6 @@
-use crate::control::grass::Grass;
-use crate::control::simple_organism::SimpleOrganism;
-use crate::control::world::World;
-pub mod control;
+use living_world_rust::control::world::World;
+use living_world_rust::orgs::grass::Grass;
+use living_world_rust::orgs::simple_organism::SimpleOrganism;
 
 fn main() {
     let org = SimpleOrganism::new(3, 5);

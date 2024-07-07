@@ -1,4 +1,4 @@
-use crate::control::orgs_data_model::Survival;
+use crate::orgs::orgs_data_model::Survival;
 
 pub struct World {
     x_dim: i32,
