@@ -1,12 +1,12 @@
 use crate::control::position::Position;
 
-#[derive(Debug)]
 pub struct Attributes {
     pub power: i32,
     pub health: i32,
     pub attack_damage: i32,
     pub rounds_alive: i32,
     pub sign: char,
+    pub world_dim: i32,
 }
 
 #[derive(Debug)]
@@ -35,7 +35,7 @@ pub trait Survival {
 }
 
 pub trait Movement {
-    fn move_position(&mut self, world_dim: i32, x: i32, y: i32);
+    fn move_position(&mut self);
 }
 
 pub trait Interaction {

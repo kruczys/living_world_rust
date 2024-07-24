@@ -14,9 +14,13 @@ impl Position {
     }
 
     pub fn move_position(&mut self, world_dim: i32, dx: i32, dy: i32) {
-        if self.x + dx < world_dim && self.y + dy < world_dim {
+        let new_position = Position {
+            x: self.x + dx,
+            y: self.y + dy,
+        };
+        if new_position.on_world(world_dim) {
             self.x += dx;
             self.y += dy;
-        }
+        };
     }
 }

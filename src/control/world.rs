@@ -3,6 +3,7 @@ use crate::orgs::orgs_data_model::Survival;
 pub struct World {
     x_dim: i32,
     y_dim: i32,
+    turn: i32,
     pub organisms: Vec<Box<dyn Survival>>,
 }
 
@@ -11,6 +12,7 @@ impl World {
         World {
             x_dim,
             y_dim,
+            turn: 0,
             organisms: Vec::new(),
         }
     }
@@ -26,7 +28,7 @@ impl World {
         self.x_dim
     }
 
-    pub fn printwrld(self) {
+    pub fn printwrld(&self) {
         for i in 0..self.dim() {
             for j in 0..self.dim() {
                 let mut found = false;
@@ -43,5 +45,14 @@ impl World {
             }
             println!();
         }
+    }
+
+    pub fn make_turn(&mut self) {
+        print!("{}[2J", 27 as char);
+        for org in self.organisms.iter_mut() {
+            org.live();
+            self.turn += 1;
+        }
+        self.printwrld();
     }
 }

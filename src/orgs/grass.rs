@@ -5,7 +5,6 @@ use crate::orgs::orgs_data_model::Reproduction;
 use crate::orgs::orgs_data_model::Status;
 use crate::orgs::orgs_data_model::Survival;
 
-#[derive(Debug)]
 pub struct Grass {
     attr: Attributes,
     repr: Reproduction,
@@ -15,7 +14,7 @@ pub struct Grass {
 }
 
 impl Grass {
-    pub fn new(at_x: i32, at_y: i32) -> Self {
+    pub fn new(at_x: i32, at_y: i32, world_dim: i32) -> Self {
         Self {
             attr: Attributes {
                 power: 10,
@@ -23,6 +22,7 @@ impl Grass {
                 attack_damage: 10,
                 sign: 'G',
                 rounds_alive: 0,
+                world_dim: world_dim,
             },
             repr: Reproduction { no_offspring: 2 },
             evo: Evolution { chance: 10 },
