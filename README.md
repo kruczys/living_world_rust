@@ -10,7 +10,7 @@ Not in any particular order
 - [ ] Add organisms interaction logic, collisions etc.
 - [ ] Add evolution
 - [x] Add world printing mechanic, before graphics
-- [ ] Add world turns
+- [x] Add world turns
 - [ ] Add graphics
 - [ ] Finish readme
 - [ ] Add statistics, with detailed info on evolution e.g. which trait evolved at which turn, which trait was the strongest in current world
