@@ -24,14 +24,6 @@ Not in any particular order
 - [ ] Add "god" abilities for user e.g. ability to kill any organism through interface
 - [ ] Make it possible for users to add their own organisms
 
-## My code of conduct for this project
-
-- No chatGPT or any other AI assistant, create everything yourself with help from books, documentation or videos.
-- Create everyday and love doing it.
-- If there will be a dilemma between something good or something funny, always choose funny.
-- Sleep well.
-- It's for your own entertainment. Have fun.
-
 ## License
 
 This software is completely free. You can do anything with it except for selling, renting or any other form of getting money from it.
