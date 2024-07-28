@@ -61,8 +61,8 @@ impl Survival for SimpleOrganism {
 impl Movement for SimpleOrganism {
     fn move_position(&mut self) {
         let mut rng = rand::thread_rng();
-        let x = rng.gen_range(-1..1);
-        let y = rng.gen_range(-1..1);
+        let x = rng.gen_range(-1..2);
+        let y = rng.gen_range(-1..2);
         self.pos.move_position(self.attr.world_dim, x, y);
     }
 }

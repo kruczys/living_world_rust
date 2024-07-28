@@ -8,7 +8,7 @@ fn main() {
     let mut world: World = World::new(10, 10);
     world.add_organism(Box::new(org));
     world.add_organism(Box::new(grass));
-    for _ in 0..10 {
+    for _ in 0..33 {
         world.make_turn();
     }
 }

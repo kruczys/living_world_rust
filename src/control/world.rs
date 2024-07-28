@@ -48,10 +48,10 @@ impl World {
     }
 
     pub fn make_turn(&mut self) {
-        print!("{}[2J", 27 as char);
+        println!("Turn: {}", self.turn);
+        self.turn += 1;
         for org in self.organisms.iter_mut() {
             org.live();
-            self.turn += 1;
         }
         self.printwrld();
     }
