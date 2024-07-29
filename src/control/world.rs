@@ -1,3 +1,4 @@
+use crate::orgs::orgs_data_model::Status;
 use crate::orgs::orgs_data_model::Survival;
 
 pub struct World {
@@ -51,7 +52,10 @@ impl World {
         println!("Turn: {}", self.turn);
         self.turn += 1;
         for org in self.organisms.iter_mut() {
-            org.live();
+            match org.get_status() {
+                Status::Alive => org.live(),
+                Status::Dead => {}
+            }
         }
         self.printwrld();
     }

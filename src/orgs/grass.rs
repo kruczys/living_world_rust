@@ -34,12 +34,16 @@ impl Grass {
 
 impl Survival for Grass {
     fn live(&mut self) {
-        self.attr.power += 2;
+        self.attr.health -= 1;
+        if self.attr.health == 0 {
+            self.die()
+        }
         self.attr.rounds_alive += 1;
     }
 
     fn die(&mut self) {
         self.status = Status::Dead;
+        self.attr.sign = 'X';
     }
     // TODO: Implement evolution
     fn evolve(&mut self) {
@@ -52,5 +56,9 @@ impl Survival for Grass {
 
     fn get_sign(&self) -> char {
         self.attr.sign
+    }
+
+    fn get_status(&self) -> &Status {
+        &self.status
     }
 }

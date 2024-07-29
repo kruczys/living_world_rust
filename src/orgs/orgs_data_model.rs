@@ -32,6 +32,7 @@ pub trait Survival {
     fn evolve(&mut self);
     fn get_position(&self) -> &Position;
     fn get_sign(&self) -> char;
+    fn get_status(&self) -> &Status;
 }
 
 pub trait Movement {
@@ -40,6 +41,10 @@ pub trait Movement {
 
 pub trait Interaction {
     fn reproduce(self, other: &dyn Survival);
+    fn get_eaten(self, other: &dyn Survival);
+}
+
+pub trait Hostilities {
     fn attack(self, other: &dyn Survival);
     fn eat(self, other: &dyn Survival);
 }
